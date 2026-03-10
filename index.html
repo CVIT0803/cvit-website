@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CVIT, LLC - Local IT Support Tupelo MS</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0a1628;color:#e8f0f8;font-family:'DM Sans',sans-serif;font-size:18px;line-height:1.7;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,22,40,0.95);border-bottom:1px solid rgba(74,158,255,0.15);padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nl{font-family:'Orbitron',monospace;font-size:20px;font-weight:900;color:#fff;text-decoration:none;letter-spacing:.08em}
+.nl span{color:#4a9eff}
+ul{display:flex;gap:32px;list-style:none}
+ul a{font-size:12px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#b8cfe8;text-decoration:none}
+ul a:hover{color:#4a9eff}
+#hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 6% 80px}
+.hi{max-width:780px;margin:0 auto}
+.eye{font-size:11px;font-weight:700;letter-spacing:.45em;text-transform:uppercase;color:#4a9eff;margin-bottom:16px}
+h1{font-family:'Orbitron',monospace;font-size:72px;font-weight:900;color:#fff;letter-spacing:.06em;line-height:1.1;margin-bottom:10px;text-shadow:0 0 40px rgba(74,158,255,0.3)}
+h1 span{color:#4a9eff}
+.sub{font-family:'Orbitron',monospace;font-size:14px;color:#a8d4ff;letter-spacing:.2em;text-transform:uppercase;margin-bottom:28px}
+.desc{font-size:20px;color:#b8cfe8;max-width:560px;margin:0 auto 44px;line-height:1.7}
+.btn{display:inline-block;padding:14px 36px;background:#2e75b6;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all .3s;box-shadow:0 0 30px rgba(46,117,182,0.4)}
+.btn:hover{background:#4a9eff;transform:translateY(-2px)}
+.divider{width:100%;height:1px;background:linear-gradient(to right,transparent,rgba(74,158,255,0.3),transparent)}
+section{padding:100px 6%}
+.inner{max-width:1100px;margin:0 auto}
+.lbl{font-size:11px;font-weight:700;letter-spacing:.45em;text-transform:uppercase;color:#4a9eff;margin-bottom:12px}
+h2{font-family:'Orbitron',monospace;font-size:36px;font-weight:700;color:#fff;letter-spacing:.04em;margin-bottom:16px}
+.sdesc{font-size:19px;color:#b8cfe8;max-width:600px;margin-bottom:56px;line-height:1.7}
+#services{background:#0f1f3d}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.card{background:rgba(15,31,61,0.8);border:1px solid rgba(74,158,255,0.12);border-radius:8px;padding:30px 26px;transition:all .3s}
+.card:hover{border-color:rgba(74,158,255,0.35);transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,0.4)}
+.cn{font-family:'Orbitron',monospace;font-size:13px;font-weight:700;color:#fff;letter-spacing:.06em;margin-bottom:10px;margin-top:16px}
+.cd{font-size:16px;color:#b8cfe8;line-height:1.6}
+#about{background:#0a1628}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.at p{font-size:19px;color:#b8cfe8;margin-bottom:18px;line-height:1.8}
+.at p strong{color:#e8f0f8}
+.stats{display:flex;flex-direction:column;gap:20px}
+.stat{background:rgba(15,31,61,0.7);border:1px solid rgba(74,158,255,0.12);border-radius:8px;padding:26px 28px;display:flex;align-items:center;gap:22px}
+.sn{font-family:'Orbitron',monospace;font-size:34px;font-weight:900;color:#4a9eff;line-height:1;white-space:nowrap}
+.sl{font-size:16px;color:#b8cfe8;line-height:1.4}
+.sl strong{display:block;font-size:17px;color:#e8f0f8;margin-bottom:2px}
+#clients{background:#0f1f3d}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-bottom:40px}
+.cc{background:rgba(10,22,40,0.7);border:1px solid rgba(74,158,255,0.12);border-radius:8px;padding:30px 26px;transition:all .3s}
+.cc:hover{border-color:rgba(74,158,255,0.3);transform:translateY(-3px)}
+.ci{font-size:10px;font-weight:700;letter-spacing:.4em;text-transform:uppercase;color:#4a9eff;margin-bottom:10px}
+.cname{font-family:'Orbitron',monospace;font-size:14px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:.04em}
+.cdet{font-size:16px;color:#b8cfe8;line-height:1.6}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.tag{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#4a9eff;background:rgba(74,158,255,0.08);border:1px solid rgba(74,158,255,0.2);padding:4px 10px;border-radius:2px}
+.cnote{text-align:center;font-size:15px;color:#2a3f58;font-style:italic}
+#contact{background:#0a1628}
+.kong{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.cintro{font-size:19px;color:#b8cfe8;margin-bottom:38px;line-height:1.8}
+.crows{display:flex;flex-direction:column;gap:24px}
+.crow{display:flex;align-items:flex-start;gap:18px}
+.cicon{width:42px;height:42px;background:rgba(74,158,255,0.08);border:1px solid rgba(74,158,255,0.2);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#4a9eff}
+.crt strong{display:block;font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#4a9eff;margin-bottom:4px}
+.crt span{font-size:18px;color:#e8f0f8}
+.cform{background:rgba(15,31,61,0.7);border:1px solid rgba(74,158,255,0.12);border-radius:8px;padding:34px 30px}
+.cform h3{font-family:'Orbitron',monospace;font-size:15px;font-weight:700;color:#fff;letter-spacing:.06em;margin-bottom:22px}
+.fg{margin-bottom:16px}
+.fg label{display:block;font-size:11px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:#4a9eff;margin-bottom:7px}
+.fg input,.fg textarea{width:100%;background:rgba(10,22,40,0.8);border:1px solid rgba(74,158,255,0.2);border-radius:4px;padding:11px 14px;color:#e8f0f8;font-family:'DM Sans',sans-serif;font-size:17px;outline:none;transition:border-color .3s}
+.fg input:focus,.fg textarea:focus{border-color:#4a9eff}
+.fg textarea{height:110px;resize:vertical}
+.cbtn{width:100%;padding:13px;background:#2e75b6;color:#fff;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;transition:all .3s;margin-top:6px}
+.cbtn:hover{background:#4a9eff}
+footer{background:rgba(5,12,24,0.95);border-top:1px solid rgba(74,158,255,0.1);padding:28px 6%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+.fl{font-family:'Orbitron',monospace;font-size:16px;font-weight:900;color:#fff;letter-spacing:.1em}
+.fl span{color:#4a9eff}
+.fc{font-size:13px;color:#2a3f58}
+@media(max-width:768px){.ag,.kong{grid-template-columns:1fr;gap:44px}ul{display:none}h1{font-size:40px}footer{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="#hero" class="nl">CVIT<span>,</span> LLC</a>
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hi">
+    <p class="eye">Tupelo, Mississippi</p>
+    <h1>CVIT<span>,</span> LLC</h1>
+    <p class="sub">Local IT Support &nbsp;•&nbsp; Technology Solutions</p>
+    <p class="desc">Reliable, local IT support for small businesses in Tupelo and the surrounding area. When something breaks, you need someone who picks up the phone — not a help desk two states away.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="services">
+  <div class="inner">
+    <p class="lbl">What We Do</p>
+    <h2>IT Solutions for Small Businesses</h2>
+    <p class="sdesc">From a single PC issue to a full office setup — CVIT handles the technology so you can focus on running your business.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="cn">PC Repair &amp; Setup</div>
+        <div class="cd">Hardware troubleshooting, software installation, new machine configuration, and OS updates. Get your computers running right and keep them that way.</div>
+      </div>
+      <div class="card">
+        <div class="cn">Network &amp; Cabling</div>
+        <div class="cd">Office network setup, Ethernet cabling runs, WiFi configuration, and internet troubleshooting. Fast, reliable connections for your whole team.</div>
+      </div>
+      <div class="card">
+        <div class="cn">Printer &amp; Scanner Support</div>
+        <div class="cd">Installation, driver updates, network printer setup, and ongoing maintenance for all your printing and scanning equipment.</div>
+      </div>
+      <div class="card">
+        <div class="cn">Email &amp; Software Setup</div>
+        <div class="cd">New employee email accounts, business software installation, license management, and updates. Smooth onboarding from day one.</div>
+      </div>
+      <div class="card">
+        <div class="cn">TV &amp; Display Install</div>
+        <div class="cd">Wall-mount TV installation, digital signage setup, and display configuration for waiting rooms, conference rooms, and retail spaces.</div>
+      </div>
+      <div class="card">
+        <div class="cn">Server Maintenance</div>
+        <div class="cd">Light server setup, maintenance, and data backup solutions. Keep your critical business data safe and your systems running reliably.</div>
+      </div>
+      <div class="card">
+        <div class="cn">Dashboards &amp; Reporting</div>
+        <div class="cd">Custom business dashboards and reports built in Excel, Google Sheets, or Power BI. Turn the data your business already has into clear, actionable insights — without hiring a full-time analyst.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="about">
+  <div class="inner">
+    <div class="ag">
+      <div class="at">
+        <p class="lbl">About CVIT</p>
+        <h2>Your Local IT Guy. For Real.</h2>
+        <p><strong>Cole Verrell</strong> is the owner and operator of CVIT, LLC — a Tupelo-based IT support company built on the idea that small businesses deserve fast, reliable, local tech help without big-company prices or out-of-town response times.</p>
+        <p>With a background in <strong>data analysis</strong> and hands-on IT support, Cole brings a unique combination of technical depth and practical problem-solving to every client relationship.</p>
+        <p>CVIT operates on a simple principle: <strong>pick up the phone, show up, and fix it.</strong> No outsourced help desks. No ticketing systems. Just a local person who knows your setup and gets there fast.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="sn">3+</div><div class="sl"><strong>Active Business Clients</strong>Serving dental, accounting, and automotive businesses in Tupelo</div></div>
+        <div class="stat"><div class="sn" style="font-size:22px">Same Day</div><div class="sl"><strong>Local Response Time</strong>No waiting on hold — you call a real local number</div></div>
+        <div class="stat"><div class="sn" style="font-size:20px">Custom Quotes</div><div class="sl"><strong>Transparent Pricing</strong>Every job quoted upfront — no surprise fees, ever</div></div>
+        <div class="stat"><div class="sn">7</div><div class="sl"><strong>Core Service Areas</strong>PCs, networking, printing, email, displays, servers, and dashboards</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="clients">
+  <div class="inner">
+    <p class="lbl">Who We Work With</p>
+    <h2>Trusted by Local Tupelo Businesses</h2>
+    <p class="sdesc">CVIT currently supports a growing list of local businesses across multiple industries. Every client relationship is built on trust, reliability, and actually showing up.</p>
+    <div class="cg">
+      <div class="cc">
+        <div class="ci">Dental Practice</div>
+        <div class="cname">Tupelo Smiles</div>
+        <div class="cdet">Multi-dentist practice with approximately 30 employees. CVIT manages workstations, printers, scanners, operatory displays, server maintenance, software updates, and employee email setup on an ongoing retainer basis.</div>
+        <div class="tags"><span class="tag">Retainer Client</span><span class="tag">30+ PCs</span><span class="tag">Priority Support</span></div>
+      </div>
+      <div class="cc">
+        <div class="ci">Automotive / Tire Shop</div>
+        <div class="cname">Hawkins Tire Store</div>
+        <div class="cdet">Local tire and automotive shop. CVIT handles PC and printer maintenance, software support, and general IT needs on an as-needed basis.</div>
+        <div class="tags"><span class="tag">PC &amp; Printer</span><span class="tag">As-Needed</span></div>
+      </div>
+      <div class="cc">
+        <div class="ci">Accounting / Professional Services</div>
+        <div class="cname">James Bryan Accounting</div>
+        <div class="cdet">Small accounting firm relying on specialized software, email, and document management. CVIT provides software support, email troubleshooting, and PC maintenance.</div>
+        <div class="tags"><span class="tag">Accounting Software</span><span class="tag">Email Support</span></div>
+      </div>
+    </div>
+    <p class="cnote">References available upon request &nbsp;•&nbsp; Currently accepting new clients in the Tupelo area</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="contact">
+  <div class="inner">
+    <p class="lbl">Get in Touch</p>
+    <h2>Let's Talk About Your IT Needs</h2>
+    <div class="kong">
+      <div>
+        <p class="cintro">No obligation, no pressure. If you have a tech issue, a question, or just want to introduce yourself — reach out. CVIT is local and always happy to have a conversation.</p>
+        <div class="crows">
+          <div class="crow"><div class="cicon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3.5 3h3.5l2 4.5-2 2a10 10 0 005 5l2-2 4.5 2V18a1 1 0 01-1 1C8.5 19 1 11.5 1 4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div><div class="crt"><strong>Phone</strong><span>662-316-4615</span></div></div>
+          <div class="crow"><div class="cicon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="1" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M1 7l9 6 9-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div><div class="crt"><strong>Email</strong><span id="email-display"></span></div></div>
+          <div class="crow"><div class="cicon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 1C6.5 1 4 3.5 4 7c0 4.5 6 11 6 11s6-6.5 6-11c0-3.5-2.5-6-6-6z" stroke="currentColor" stroke-width="1.4"/><circle cx="10" cy="7" r="2" stroke="currentColor" stroke-width="1.3"/></svg></div><div class="crt"><strong>Location</strong><span>Tupelo, Mississippi</span></div></div>
+          <div class="crow"><div class="cicon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.4"/><path d="M10 6v4l3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div><div class="crt"><strong>Response Time</strong><span>Same day — usually within hours</span></div></div>
+        </div>
+      </div>
+      <div class="cform">
+        <h3>Send a Message</h3>
+        <div id="form-wrap">
+          <form id="contact-form">
+            <div class="fg"><label>Your Name</label><input type="text" name="name" placeholder="John Smith" required></div>
+            <div class="fg"><label>Business Name</label><input type="text" name="business" placeholder="Smith &amp; Co."></div>
+            <div class="fg"><label>Phone or Email</label><input type="text" name="contact" placeholder="662-555-1234 or email@business.com" required></div>
+            <div class="fg"><label>What do you need help with?</label><textarea name="message" placeholder="Brief description of your IT issue or question..."></textarea></div>
+            <button type="submit" class="cbtn">Send Message</button>
+            <p id="form-error" style="display:none;color:#ff6b6b;margin-top:12px;font-size:15px;text-align:center;">Something went wrong. Please try again or call 662-316-4615.</p>
+          </form>
+        </div>
+        <div id="form-thanks" style="display:none;text-align:center;padding:40px 20px;">
+          <div style="font-size:48px;margin-bottom:20px;">&#10003;</div>
+          <h3 style="color:#4a9eff;margin-bottom:16px;font-size:18px;">Message Received!</h3>
+          <p style="color:#b8cfe8;font-size:17px;line-height:1.7;margin-bottom:12px;">Thanks for reaching out to CVIT, LLC. Cole will be in touch with you shortly — usually the same day.</p>
+          <p style="color:#b8cfe8;font-size:16px;">Need immediate help? Call <strong style="color:#e8f0f8;">662-316-4615</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">CVIT<span>,</span> LLC</div>
+  <div class="fc">2025 CVIT, LLC &nbsp;•&nbsp; Tupelo, MS &nbsp;•&nbsp; Local IT Support</div>
+</footer>
+
+<script>
+// Build email dynamically so Cloudflare can't strip it
+const u='cvitllc0803', d='gmail', t='com';
+const el = document.getElementById('email-display');
+if(el){ el.innerHTML = '<a href="mailto:'+u+'@'+d+'.'+t+'" style="color:#e8f0f8;text-decoration:none;">'+u+'@'+d+'.'+t+'</a>'; }
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; obs.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.card,.cc,.stat').forEach(el => { el.style.opacity='0'; el.style.transform='translateY(20px)'; el.style.transition='opacity 0.6s ease, transform 0.6s ease'; obs.observe(el); });
+
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button');
+  const errMsg = document.getElementById('form-error');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  errMsg.style.display = 'none';
+  const data = new FormData(this);
+  try {
+    const res = await fetch('https://formspree.io/f/mlgpjolb', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('form-wrap').style.display = 'none';
+      document.getElementById('form-thanks').style.display = 'block';
+    } else {
+      errMsg.style.display = 'block';
+      btn.textContent = 'Send Message';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    errMsg.style.display = 'block';
+    btn.textContent = 'Send Message';
+    btn.disabled = false;
+  }
+});
+</script>
